@@ -71,7 +71,7 @@ body {
 	background-size: cover;
 	background-image: 
 		radial-gradient(transparent, black),
-		url('https://media.discordapp.net/attachments/712383102928027688/1158602016067690586/IMG_1882.webp?ex=651cd7b6&is=651b8636&hm=484cd573faca843f55f96e7c9dbe42570ac162f25695a732b4f8fec60d580420&=');
+		url('https://cdn.discordapp.com/attachments/712383102928027688/1158602016067690586/IMG_1882.webp?ex=651cd7b6&is=651b8636&hm=484cd573faca843f55f96e7c9dbe42570ac162f25695a732b4f8fec60d580420&=');
 	position: relative;
 	font-family: 'Assistant', sans-serif;
 	box-shadow: inset 0 0 10px black;
@@ -109,7 +109,7 @@ body {
 	content: "";
 	position: absolute;
 	background: #111214;
-	background-image: url('https://media.discordapp.net/attachments/712383102928027688/1158602015509848124/IMG_1884.jpg?ex=651cd7b6&is=651b8636&hm=6a51281f4c15460d1461075e9831fedfd4e81ff03194fe0e1dbced851850c57c&=&width=608&height=905');
+	background-image: url('https://cdn.discordapp.com/attachments/712383102928027688/1158602015509848124/IMG_1884.jpg?ex=651cd7b6&is=651b8636&hm=6a51281f4c15460d1461075e9831fedfd4e81ff03194fe0e1dbced851850c57c&=&width=608&height=905');
 	filter: blur(8px) sepia(0.39) opacity(0.5);
 	top: 0;
 	right: 0;
