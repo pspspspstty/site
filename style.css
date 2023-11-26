@@ -16,3 +16,21 @@ body {
 	margin: 100px;
 	padding: 0;
 }
+
+.text1 {
+	color: red;
+	float: left;
+	clear: both;
+}
+
+.text2 {
+	color: black;
+	clear: both;
+	float: left;
+	margin-left: 15px;
+}
+
+li {
+	text-align: left;
+	margin-left: 2em;
+}
