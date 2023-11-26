@@ -3,6 +3,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: content-box;
 	text-align: center;
 }
 
@@ -12,4 +13,6 @@ body {
 
 .window {
 	position: absolute;
+	margin: 100px;
+	padding: 0;
 }
