@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import '@react95/icons/icons.css';
 import "98.css";
 
 const App = () => {
@@ -45,3 +46,5 @@ ReactDOM.render(
   </React.StrictMode>,
   rootElement
 );
+
+alert('hey');
