@@ -2,47 +2,46 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "98.css";
 
-// Make the DIV element draggable:
-dragElement(document.getElementById("draggable"));
-dragElement(document.getElementById("popup"));
+const App = () => {
+    const [count, setCount] = React.useState(0);
+    return (
+      <div style={{ width: 300 }} className="window">
+        <div className="title-bar">
+          <div className="title-bar-text">Counter</div>
+          <div className="title-bar-controls">
+            <button aria-label="Minimize" />
+            <button aria-label="Maximize" />
+            <button aria-label="Close" />
+          </div>
+        </div>
+  
+        <div className="window-body">
+          <p style={{ textAlign: "center" }}>Current count: {count}</p>
+          <div className="field-row" style={{ justifyContent: "center" }}>
+            <button onClick={() => setCount(count + 1)}>+</button>
+            <button onClick={() => setCount(count - 1)}>-</button>
+            <button onClick={() => setCount(0)}>0</button>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "-header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "-header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.Event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.Event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+  <React.StrictMode>
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+      }}
+    >
+      <div style={{ width: 350 }}>
+        <App />
+      </div>
+    </div>
+  </React.StrictMode>,
+  rootElement
+);
