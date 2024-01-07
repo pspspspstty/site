@@ -72,4 +72,27 @@
             <a href="index.html"><button style="float: left; margin: 7px; margin-left: 39px">return</button></a>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script>
+        console.log('start');
+        const position = { x: 0, y: 0 }
+
+        interact('.window').draggable({
+            allowFrom: '.title-bar',
+        listeners: {
+            start (event) {
+                console.log(event.type, event.target)
+            },
+            move (event) {
+                position.x += event.dx
+                position.y += event.dy
+
+                event.target.style.transform =
+                `translate(${position.x}px, ${position.y}px)`
+            },
+        },
+        })
+    </script>
+    <script type="module" src="index.js"></script>    
 </body>
