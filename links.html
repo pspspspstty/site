@@ -33,32 +33,65 @@
         </div>
 
         <div class="window-body">
-            <pre style="text-align: left">hello</pre>
+            <pre class="ascii-art" style="text-align: left"><b style="color: red;">ZENOS</b>&#10094;r&#10095; <b style="color: rgb(0, 255, 0);">SYS</b>
+                &#10094;c&#10095; copyright <b style="color: red;">ZENOS</b> corp 1991-2007.
+                      <br>Z:&#92;<b style="color: rgb(0, 255, 0);">ZSYS</b>&#92;SYSTEM32>
+                
+
+                                                                                                                   
+                                                                                                                   
+                                                                                                                   
+                                                                                                              ,-.----.      
+                ,----,              ,---,    ,---.                                            ,---.    __  ,-.\    /  \     
+              .'   .`|          ,-+-. /  |  '   ,'\   .--.--.                                '   ,'\ ,' ,'/ /||   :    |    
+           .'   .'  .'         ,--.'|'   | /   /   | /  /    '     ,---.             ,---.  /   /   |'  | |' ||   | .\ :    
+         ,---, '   ./         |   |  ,"' |.   ; ,. :|  :  /`./    /     \           /     \.   ; ,. :|  |   ,'.   : |: |    
+         ;   | .'  /          |   | /  | |'   | |: :|  :  ;_     /    /  |         /    / ''   | |: :'  :  /  |   |  \ :    
+         `---' /  ;--,        |   | |  | |'   | .; : \  \    `. .    ' / |        .    ' / '   | .; :|  | '   |   : .  |    
+           /  /  / .`|        |   | |  |/ |   :    |  `----.   \'   ;   /|        '   ; :__|   :    |;  : |   :     |`-'    
+         ./__;     .'         |   | |--'   \   \  /  /  /`--'  /'   |  / |        '   | '.'|\   \  / |  , ;   :   : : ___   
+         ;   |  .'            |   |/        `----'  '--'.     / |   :    |        |   :    : `----'   ---'    |   | :/  .\  
+         `---'                '---'                   `--'---'   \   \  /          \   \  /                   `---'.|\  ; | 
+                                                                  `----'            `----'                      `---` `--"  
+                                                                                                                            
+         
+         
+            </pre>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script>
         console.log('start');
-        const position = { x: 0, y: 0 }
 
         interact('.window').draggable({
             allowFrom: '.title-bar',
-        listeners: {
-            start (event) {
-                console.log(event.type, event.target)
-            },
-            move (event) {
-                position.x += event.dx
-                position.y += event.dy
+            listeners: {
+                start(event) {
+                    console.log(event.type, event.target);
+                    // Initialize a new position object if it doesn't exist for this window
+                    if (!event.target.dataset.position) {
+                        event.target.dataset.position = JSON.stringify({ x: 0, y: 0 });
+                    }
+                },
+                move(event) {
+                    // Retrieve the position object for the dragged window
+                    const position = JSON.parse(event.target.dataset.position || '{ "x": 0, "y": 0 }');
+                    
+                    // Update the position
+                    position.x += event.dx;
+                    position.y += event.dy;
 
-                event.target.style.transform =
-                `translate(${position.x}px, ${position.y}px)`
+                    // Apply the transform to the dragged window
+                    event.target.style.transform = `translate(${position.x}px, ${position.y}px)`;
+
+                    // Store the updated position back to the element's dataset
+                    event.target.dataset.position = JSON.stringify(position);
+                },
             },
-        },
-        })
+        });
     </script>
-    <script type="module" src="index.js"></script>    
+    <script type="module" src="./links.js"></script>    
 </body>
 
 <a href="https://discord.com/users/346440801859010572/" target="_blank"><button style="float:left; margin: 7px;">discord</button></a>

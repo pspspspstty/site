@@ -37,3 +37,10 @@ li {
 	text-align: left;
 	margin-left: 2em;
 }
+
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+	color: white;
+	background-color: black;
+}

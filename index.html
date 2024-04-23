@@ -27,7 +27,7 @@
             </div>
     
             <div class="title-bar-controls">
-                <button aria-label="Help"></button>
+                <button aria-label="Help" id="help"></button>
                 <button aria-label="Close"></button>
             </div>
         </div>
@@ -48,7 +48,7 @@
             </div>
             
             <div style="clear:both; float: left; margin-top: 7px;">
-                click one of the buttons below.... <strong>if u dare....</strong>
+                click one of the buttons below<sub>(or above)</sub>.... <strong>if u dare....</strong>
             </div>
 
             <div style="clear:both; display: flex; justify-content: space-between;">
@@ -63,28 +63,63 @@
         </div>
     </div>
 
+    <div id="helpalert" class="window" style="margin: 160px; visibility: hidden;">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                help >_<
+            </div>
+    
+            <div class="title-bar-controls">
+                <button aria-label="Close" id="exit"></button>
+            </div>
+        </div>
+    
+        <div class="window-body">
+            <div style="margin: 7px; text-align: left;">
+                welcome; everything here is self explanatory
+                <br>every window here is draggable 
+                <br><sub>(i really wanted to tell you that)</sub>
+            </div>
+
+            <section class="field-row" style="justify-content: flex-end;">
+                <button id="ok">ok</button></a>
+                <button id="cool">cool</button></a>
+            </section>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script>
         console.log('start');
-        const position = { x: 0, y: 0 }
 
         interact('.window').draggable({
             allowFrom: '.title-bar',
-        listeners: {
-            start (event) {
-                console.log(event.type, event.target)
-            },
-            move (event) {
-                position.x += event.dx
-                position.y += event.dy
+            listeners: {
+                start(event) {
+                    console.log(event.type, event.target);
+                    // Initialize a new position object if it doesn't exist for this window
+                    if (!event.target.dataset.position) {
+                        event.target.dataset.position = JSON.stringify({ x: 0, y: 0 });
+                    }
+                },
+                move(event) {
+                    // Retrieve the position object for the dragged window
+                    const position = JSON.parse(event.target.dataset.position || '{ "x": 0, "y": 0 }');
+                    
+                    // Update the position
+                    position.x += event.dx;
+                    position.y += event.dy;
 
-                event.target.style.transform =
-                `translate(${position.x}px, ${position.y}px)`
+                    // Apply the transform to the dragged window
+                    event.target.style.transform = `translate(${position.x}px, ${position.y}px)`;
+
+                    // Store the updated position back to the element's dataset
+                    event.target.dataset.position = JSON.stringify(position);
+                },
             },
-        },
-        })
+        });
     </script>
-    <script type="module" src="index.js"></script>    
+    <script type="module" src="./index.js"></script>    
 </body>
 
 </html>
