@@ -3,12 +3,12 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>pspspspstty/links</title>
+    <title>links</title>
     <link rel="canonical" href="https://o-ndot.com" />
     <link rel="icon" href="ico.jpg" type="image/jpg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/xp.css" />
-    <meta name="title" content="about">
+    <meta name="title" content="links">
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <meta property="og:type" content="website">
     <meta property="og:title" content="pspspspstty">
@@ -20,43 +20,157 @@
 </head>
 
 <body class="body">
-    <div class="window" style="background-color: black;">
+    <div class="window">
         <div class="title-bar">
             <div class="title-bar-text">
-                cmd.exe
+                links
             </div>
+    
             <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
+                <button aria-label="Help" id="help"></button>
                 <button aria-label="Close"></button>
             </div>
         </div>
+    
+        <div class="window-body" style="max-width: 450px;">
+            <div style="float: left; margin-bottom: 10px;">
+                <u>F</u>ile &nbsp &nbsp <u>E</u>dit &nbsp &nbsp <u>V</u>iew &nbsp  &nbsp<u>H</u>elp
+            </div>
 
+            <menu role="tablist" style="clear: both;">
+                <button aria-selected="true" aria-controls="socials">socials</button>
+                <button aria-controls="discord">discord</button>
+                <button aria-controls="github">github</button>
+                <button aria-controls="others">others</button>
+            </menu>
+            <article role="tabpanel" id="socials">
+                <div style="clear: both; overflow: hidden; display: flex; justify-content: space-evenly">
+                    <fieldset style="margin-right: 13px;">
+                        <legend>socials</legend>
+                        <div style="text-wrap: wrap; text-align: left;">
+                            2 lazy to make buttons for each of my social media accounts
+                            <br>
+                            <br>
+                            <p style="text-align: left;">twitter: <code style="color: red">@pspspspstty</code></p>
+                            <p style="text-align: left;">instagram: <code style="color: red">@pspspspstty</code></p>
+                            <p style="text-align: left;">everything else: <code style="color: red">@pspspspstty (probably)</code></p>
+                            <p style="text-align: left;"><a href="https://www.youtube.com/channel/UCuL7hUyE8ItDwh4jgkDr1gg" target="_blank">youtube</a></p>
+                        </div>
+                    </fieldset>
+
+                    <div class="status-bar" style="display: flex; width: 50%;">
+                        <img src="mtox.png" style="object-fit: contain; max-width: 100%; max-height: 100%;" draggable="false">
+                    </div>
+                </div>
+            </article>
+            <article role="tabpanel" hidden id="discord">
+                <div style="clear: both; overflow: hidden; display: flex; justify-content: space-evenly">
+                    <fieldset style="margin-right: 13px;">
+                        <legend>discord</legend>
+                        <div style="text-wrap: wrap; text-align: left;">
+                            typically <code style="color: red">@_sukuwuna</code> or <code style="color: red">@pspspspstty</code>
+                            <br>
+                            <br> HOWEVER&#x1FAF5;
+                            <p><a href="https://discord.com/users/346440801859010572/" target="_blank">this will always link to my profile</a></p>
+                        </div>
+                    </fieldset>
+
+                    <div class="status-bar" style="display: flex; width: 50%;">
+                        <img src="mtox1.png" style="object-fit: contain; max-width: 100%; max-height: 100%;" draggable="false">
+                    </div>
+                </div>
+            </article>
+            <article role="tabpanel" hidden id="github">
+                <div style="clear: both; overflow: hidden; display: flex; justify-content: space-evenly">
+                    <fieldset style="margin-right: 13px;">
+                        <legend>github</legend>
+                        <div style="text-wrap: wrap; text-align: left;">
+                            <p><a href="https://github.com/pspspspstty" target="_blank">you can find my github here</a></p>
+                        </div>
+                    </fieldset>
+
+                    <div class="status-bar" style="display: flex; width: 50%;">
+                        <img src="mtox2.png" style="object-fit: contain; max-width: 100%; max-height: 100%;" draggable="false">
+                    </div>
+                </div>
+            </article>
+            <article role="tabpanel" hidden id="others">
+                <div style="clear: both; overflow: hidden; display: flex; justify-content: space-evenly">
+                    <fieldset style="margin-right: 13px;">
+                        <legend>others</legend>
+                        <div style="text-wrap: wrap; text-align: left;">
+                            pranked there are no others
+                            <br>
+                            <br>
+                            <p style="text-align: left;">maybe except for this little blog<button id="blog">blog</button></p>
+                        </div>
+                    </fieldset>
+
+                    <div class="status-bar" style="display: flex; width: 50%;">
+                        <img src="mtox3.png" style="object-fit: contain; max-width: 100%; max-height: 100%;" draggable="false">
+                    </div>
+                </div>
+            </article>
+
+            <section class="field-row" style="justify-content: flex-end;">
+                <a href="profile.html"><button>about me</button></a>
+                <a href="index.html"><button>GO HOME!</button></a>
+            </section>
+        </div>
+    </div>
+
+    <div id="passreq" class="window" style="margin: 160px; visibility: hidden; z-index: 98;">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                PASSWORD REQUIRED!!!
+            </div>
+    
+            <div class="title-bar-controls">
+                <button aria-label="Close" id="exitpass"></button>
+            </div>
+        </div>
+    
         <div class="window-body">
-            <pre class="ascii-art" style="text-align: left"><b style="color: red;">ZENOS</b>&#10094;r&#10095; <b style="color: rgb(0, 255, 0);">SYS</b>
-                &#10094;c&#10095; copyright <b style="color: red;">ZENOS</b> corp 1991-2007.
-                      <br>Z:&#92;<b style="color: rgb(0, 255, 0);">ZSYS</b>&#92;SYSTEM32>
-                
+            <div style="margin: 7px; text-align: center; max-width: 239px;">
+                <b style="font-size: 13pt; text-wrap: wrap;">YOU NEED A PASSWORD TO CONTINUE!</b>
+            </div>
 
-                                                                                                                   
-                                                                                                                   
-                                                                                                                   
-                                                                                                              ,-.----.      
-                ,----,              ,---,    ,---.                                            ,---.    __  ,-.\    /  \     
-              .'   .`|          ,-+-. /  |  '   ,'\   .--.--.                                '   ,'\ ,' ,'/ /||   :    |    
-           .'   .'  .'         ,--.'|'   | /   /   | /  /    '     ,---.             ,---.  /   /   |'  | |' ||   | .\ :    
-         ,---, '   ./         |   |  ,"' |.   ; ,. :|  :  /`./    /     \           /     \.   ; ,. :|  |   ,'.   : |: |    
-         ;   | .'  /          |   | /  | |'   | |: :|  :  ;_     /    /  |         /    / ''   | |: :'  :  /  |   |  \ :    
-         `---' /  ;--,        |   | |  | |'   | .; : \  \    `. .    ' / |        .    ' / '   | .; :|  | '   |   : .  |    
-           /  /  / .`|        |   | |  |/ |   :    |  `----.   \'   ;   /|        '   ; :__|   :    |;  : |   :     |`-'    
-         ./__;     .'         |   | |--'   \   \  /  /  /`--'  /'   |  / |        '   | '.'|\   \  / |  , ;   :   : : ___   
-         ;   |  .'            |   |/        `----'  '--'.     / |   :    |        |   :    : `----'   ---'    |   | :/  .\  
-         `---'                '---'                   `--'---'   \   \  /          \   \  /                   `---'.|\  ; | 
-                                                                  `----'            `----'                      `---` `--"  
-                                                                                                                            
-         
-         
-            </pre>
+            <div class="field-row-stacked" style="width: 200px; margin: auto; margin-top: 7px; margin-bottom: 13px;">
+                <label for="pass">password plz</label>
+                <input id="pass" type="password" value=""/>
+
+                <input type="checkbox" id="showpass" onclick="showpass()">
+                <label for="showpass">show password</label>
+            </div>
+
+            <section class="field-row" style="justify-content: flex-end;">
+                <button id="passaccept">FREE ROBUX!!</button></a>
+            </section>
+        </div>
+    </div>
+
+    <div id="helpalert" class="window" style="margin: 160px; visibility: hidden; z-index: 99;">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                help >_<
+            </div>
+    
+            <div class="title-bar-controls">
+                <button aria-label="Close" id="exit"></button>
+            </div>
+        </div>
+    
+        <div class="window-body">
+            <div style="margin: 7px; text-align: left;">
+                welcome; everything here is self explanatory
+                <br>every window here is draggable 
+                <br><sub>(i really wanted to tell you that)</sub>
+            </div>
+
+            <section class="field-row" style="justify-content: flex-end;">
+                <button id="ok">ok</button></a>
+                <button id="cool">cool</button></a>
+            </section>
         </div>
     </div>
 
@@ -93,6 +207,3 @@
     </script>
     <script type="module" src="links.js"></script>    
 </body>
-
-<a href="https://discord.com/users/346440801859010572/" target="_blank"><button style="float:left; margin: 7px;">discord</button></a>
-<a href="https://github.com/pspspspstty" target="_blank"><button style="clear:both; float:left; margin: 7px;">github</button></a>

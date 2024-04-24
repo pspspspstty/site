@@ -1,0 +1,44 @@
+<div class="window" style="background-color: black;">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                cmd.exe
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="window-body">
+            <pre style="text-align: left;"><b style="color: red;">ZENOS</b>&#10094;r&#10095; <b style="color: rgb(0, 255, 0);">SYS</b>
+                &#10094;c&#10095; copyright <b style="color: red;">ZENOS</b> corp 1991-2007.
+                      <br>Z:&#92;<b style="color: rgb(0, 255, 0);">ZSYS</b>&#92;SYSTEM32>
+            </pre>
+            <pre>
+                
+
+                                                                                                                   
+                                                                                                                   
+                                                                                                                   
+                                                                                                              ,-.----.      
+                ,----,              ,---,    ,---.                                            ,---.    __  ,-.\    /  \     
+              .'   .`|          ,-+-. /  |  '   ,'\   .--.--.                                '   ,'\ ,' ,'/ /||   :    |    
+           .'   .'  .'         ,--.'|'   | /   /   | /  /    '     ,---.             ,---.  /   /   |'  | |' ||   | .\ :    
+         ,---, '   ./         |   |  ,"' |.   ; ,. :|  :  /`./    /     \           /     \.   ; ,. :|  |   ,'.   : |: |    
+         ;   | .'  /          |   | /  | |'   | |: :|  :  ;_     /    /  |         /    / ''   | |: :'  :  /  |   |  \ :    
+         `---' /  ;--,        |   | |  | |'   | .; : \  \    `. .    ' / |        .    ' / '   | .; :|  | '   |   : .  |    
+           /  /  / .`|        |   | |  |/ |   :    |  `----.   \'   ;   /|        '   ; :__|   :    |;  : |   :     |`-'    
+         ./__;     .'         |   | |--'   \   \  /  /  /`--'  /'   |  / |        '   | '.'|\   \  / |  , ;   :   : : ___   
+         ;   |  .'            |   |/        `----'  '--'.     / |   :    |        |   :    : `----'   ---'    |   | :/  .\  
+         `---'                '---'                   `--'---'   \   \  /          \   \  /                   `---'.|\  ; | 
+                                                                  `----'            `----'                      `---` `--"  
+                                                                                                                            
+         
+         
+            </pre>
+            <pre style="text-align: left;">     <b>INTERFACE</b>
+            <a>link 1</a>
+            </pre>
+        </div>
+    </div>
