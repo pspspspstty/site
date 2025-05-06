@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let pass = document.getElementById("pass").value;
 
         if (pass === "gojofucker9000") {
-            window.location.href = "./diary.html"
+            window.location.href = "../html/diary.html"
             console.log(pass);
         } else if (pass === "") {
             alert("maybe type something AND THEN you'll have a chance to make it in");
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             x.type = "password";
         }
-    };
+    }
 
     const buttonblog = document.getElementById("blog")
     buttonblog.addEventListener("click", function() {
